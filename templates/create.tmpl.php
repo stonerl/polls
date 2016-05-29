@@ -108,7 +108,10 @@
 			sort($users, SORT_NATURAL | SORT_FLAG_CASE );
                         foreach ($users as $user) : ?>
                             <li class="cl_user_item cl_access_item" id="user_<?php p($user); ?>" >
-                                <?php p($user); ?>
+				<?php p($user); ?>
+				(
+				<?php p(OC_User::getDisplayName($user)); ?>
+				)
                             </li>
                         <?php endforeach; ?>
                     </ul>
