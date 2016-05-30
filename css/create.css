@@ -9,7 +9,10 @@
 }
 
 #sec_name {
-    display: none
+    display: none;
+    font-style: italic;
+    color: gray;
+    font-size: 0.9em;
 }
 
 #access_rights h3 {

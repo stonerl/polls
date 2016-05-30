@@ -253,7 +253,9 @@ $(document).ready(function () {
                 $(this).show();
 		var kid = $(this).children();
 		if (kid.text().toLowerCase().indexOf(searchTerm) > -1 ) {
-		kid.show();
+		   kid.show();
+		} else {
+		   kid.hide();
 		}
             } else if ( searchTerm.length < 1 ) { 
                 $(this).show();
@@ -261,6 +263,8 @@ $(document).ready(function () {
                 kid.hide();
             } else {
 		$(this).hide();
+		var kid = $(this).children();
+                kid.hide();
 	    }
         });
     });
