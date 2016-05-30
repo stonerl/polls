@@ -252,7 +252,6 @@ $(document).ready(function () {
             if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 ) {
                 $(this).show();
 		var kid = $(this).children();
-		var test = kid.text().toLowerCase().indexOf(searchTerm) ;
 		if (kid.text().toLowerCase().indexOf(searchTerm) > -1 ) {
 		kid.show();
 		}
