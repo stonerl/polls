@@ -249,22 +249,10 @@ $(document).ready(function () {
     $('.live-search-box-user').on('keyup', function(){
 	var searchTerm = $(this).val().toLowerCase();
         $('.live-search-list-user li').each(function(){
-            if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 ) {
+            if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0  || searchTerm.length < 1) {
                 $(this).show();
-		var kid = $(this).children();
-		if (kid.text().toLowerCase().indexOf(searchTerm) > -1 ) {
-		   kid.show();
-		} else {
-		   kid.hide();
-		}
-            } else if ( searchTerm.length < 1 ) { 
-                $(this).show();
-		var kid = $(this).children();
-                kid.hide();
             } else {
 		$(this).hide();
-		var kid = $(this).children();
-                kid.hide();
 	    }
         });
     });
